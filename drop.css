@@ -1,0 +1,24 @@
+.p{
+    display:flex;
+    justify-content: space-between;
+    background-color: bisque;
+
+}
+
+.navitems{
+    display:flex;
+    gap:4px;
+}
+
+.sub{
+    display:none;
+    position:absolute;
+}
+
+.about:hover .sub{
+    display:block;
+}
+
+.about{
+    position: relative;
+}

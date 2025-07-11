@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.navbar1{
+    display:Flex;
+    gap:10px;
+    background-color: black;
+    height:3rem;
+}
+
+.navbar1 a{
+    text-decoration: none;
+    color:white;
+    padding:20px;
+    margin-left: 5px;
+    font-size: 17px;
+}
+
+.navbar1 a:hover{
+    background-color: white;
+    color:black;
+
+}
+
+.navbar2{
+    display:flex;
+    justify-content: space-between;
+    height:3.5rem;
+    border:2px solid gray;
+}
+
+.a{
+    display:flex;
+    margin-left: 10px;
+    gap:45px;
+    justify-content: space-around;
+}
+
+.a1{
+    display:flex;
+    gap:3px;
+}
+.f1{
+    display:flex;
+    gap:7px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+
+.a h1{
+    color:rgb(0,86,210);
+}
+
+.a1 h2{
+    color:rgb(0,86,210);
+    border:2px solid blue;
+    height: 2.1rem;
+    margin-top: 8px;
+}
+
+.a11{
+    display:none;
+    position:absolute;
+}
+
+.a1:hover .a11{
+    display:flex;
+    gap:15px;
+
+}
+
+.a11m{
+    background-color: white;
+    display: flex;
+}
+
+.a11 a{
+    color:black;
+    text-decoration: none;
+    
+}
+
+.a12{
+    border:2px solid gray;
+    border-radius: 14px;
+    height:2.1rem;
+    width:350px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.6rem;
+}
+
+.a12 input{
+    border:none;
+}
+
+.a12 button {
+    background-color: rgb(0,86,210);
+    width:33px;
+    height:33px;
+    border-radius: 100px;
+    font-size: 17px;
+    color:white;
+}
+
+.b{
+    display:flex;
+    gap:15px;
+    margin-top:16px;
+    margin-right: 10px;
+}
+
+.b button{
+    color:rgb(0,86,210);
+    border:2px solid rgb(0,86,210);
+    margin-bottom: 5px;
+    
+}
+
+.b a{
+    color:black;
+    text-decoration: none;
+}
+
+
+.her{
+    background-color: rgb(240,246,255);
+
+}
+
+.herosection{
+    margin-left:40px;
+    display:flex;
+    gap:40px;
+    background-color: rgb(240,246,255);
+    height: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hero1 h1{
+font-size: 37px;
+}
+
+.hero1 p{
+font-size: 17px;
+}
+
+.hero1 h2{
+    color:rgb(0,86,210);
+}
+
+.hero1 h3{
+    color:white;
+    background-color: rgb(0,86,210);
+    width:60px;
+    font-size: 20px;
+    
+
+}
+.hero1 button{
+    background-color: rgb(0,86,210);
+    color:white;
+    font-size: 17px;
+    border-radius: 8px;
+    margin-top:16px;
+    height:40px;
+    width:200px;
+    margin-bottom: 4px;
+}
+
+.hero1 a{
+    text-decoration: none;
+    color: rgb(0,86,210);
+    font-size: 16px;
+}
+
+
+.hero2{
+    background-image:url("");
+}
+
+.co{
+    font-size:20px;
+}
+
+.comp{
+    display:flex;
+    gap:30px;
+    margin-left: 25px;
+
+}

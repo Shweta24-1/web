@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onlinestore.com</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        .container{
+            display: flex;
+            border:2px solid black;
+            box-shadow: 2px 3px 2px grey;
+        }
+        .nav{
+            padding:20px;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(20, 20, 77);
+            color:yellow;
+            font-style: oblique;
+        }
+
+        .navitems{
+            display: flex;
+            flex-wrap: wrap;
+             justify-content: space-between;
+            align-items: center;
+            gap:14px;
+            position: relative;
+        
+        }
+
+        .sm{
+            display:none;
+            color:black;
+        }
+
+        .sm a{
+            display:block;
+            color:black;
+        }
+
+        .sf:hover .sm{
+            display:block;
+            color:black;
+        }
+        .navitems a{
+            text-decoration: none;
+            color:white;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+    
+    
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">OnlineStore<sup>.com</sup></div>
+        <div class="navitems"><a href="">Home</a><div class="sf"><a href="">Shop for</a><div class="sm"><a href="">Boys</a> <a href="">Girls</a> <a href="">Men</a><a href="">women</a></div></div> <a href="">Filter</a></div>
+    </div>
+    <div class="container">
+    <div class="card">
+    </div>
+</div>
+
+<div id="product-container"></div>
+</body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+<script>
+     fetch('https://fakestoreapi.com/products')
+  .then(res => res.json())
+  .then(products => {
+    console.log(products);
+    const container = document.getElementById("product-container");
+    products.forEach(element => {
+      let card = document.createElement("div");
+      card.innerHTML = `
+        <h2>${element.title}</h2>
+        <img src="${element.image}" alt="${element.title}" />
+        <p>$${element.price} <br> $${element.description}</p>
+      `;
+      container.appendChild(card); 
+    });
+  });
+</script>
+</html>
