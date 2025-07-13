@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .jokes{
+            display:flex;
+            justify-content: center;
+            justify-items: center;
+            height: 100vh;
+
+        }
+        .jk{
+            height: 600px;
+            width:800px;
+            border:2px solid grey;
+            box-shadow: 2px 3px 3px goldenrod;
+            text-align:center;
+            background-color: black;
+            color:goldenrod;
+        
+
+        }
+        
+        .jokes button{
+             background-color:black;
+            color:whitesmoke;
+            height:40px;
+            max-width:max-content;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="jokes">
+        <div class="jk">
+             
+        </div>
+       <button>New Joke</button>
+    </div>
+    
+</body>
+<script>
+
+
+const button=document.querySelector("button")
+button.addEventListener("click",()=>{
+    fetch("https://official-joke-api.appspot.com/jokes/random")
+.then(res=>res.json())
+.then(j=>
+{
+    console.log(j)
+    js=j.setup;
+    jp=j.punchline;
+     const jk=document.querySelector(".jk")
+    jk.innerHTML=`<h1>${js}</h1><br><p>${jp}</p>`
+   
+}
+)
+ 
+   
+})
+</script>
+</html>

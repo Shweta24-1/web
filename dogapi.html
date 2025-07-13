@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dog{
+            display:flex;
+            justify-content: center;
+            justify-items: center;
+            height: 100vh;
+            
+        }
+
+        .card{
+            height: 600px;
+            width:800px;
+            border:2px solid grey;
+            box-shadow: 2px 3px 3px goldenrod;
+            text-align:center;
+            background-color: black;
+        }
+
+        .card img{
+            margin-top:1rem;
+            height:550px;
+            width:750px;
+            border: 4px solid black;
+            border-radius: 6px;
+            box-shadow: 2px 3px 4px goldenrod;
+        }
+        .card button{
+            background-color: red;
+            color:whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="dog">
+        <div class="card">
+            <img  alt="network error">
+            <br>
+            <button>Generate</button>
+        </div>
+    </div>
+    
+    
+</body>
+<script>
+let link="";
+const button=document.querySelector("button");
+button.addEventListener("click",()=>{fetch("https://dog.ceo/api/breeds/image/random")
+    .then(res=>res.json())
+    .then(d=>
+    {link=d.message;
+     const img=document.querySelector("img")
+img.src=link;
+    }
+)
+   
+})
+
+    </script>
+</html>

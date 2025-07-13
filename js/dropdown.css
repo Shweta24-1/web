@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+#r:hover .drop{
+background-color: red;
+}
+
+#g:hover .drop{
+background-color: green;
+}
+
+#b:hover .drop{
+background-color: blue;
+}

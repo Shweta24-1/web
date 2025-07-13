@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="con">
+    <label for="ip">Make Choice</label>
+    <input id="r" type="text" placeholder="Red(0-255)">
+    <input id="g" type="text" placeholder="Green(0-255)">
+    <input id="b" type="text" placeholder="Blue(0-255)">
+    <button>Apply</button>
+   </div>
+</body>
+<script>
+    let r=parseInt(document.querySelector("#r"));
+    let g=parseInt(document.querySelector("#g"));
+    let b=parseInt(document.querySelector("#b"));
+    let button=document.querySelector("button")
+
+       if(r>255|g>255|b>255){
+        console.error(invalid);
+       }else{
+        button.addEventListner("click",
+        
+        ()=>{r=parseInt(r.value);
+            g=parseInt(g.value);
+            b=parseInt(b.value);
+            con.style.backgroundColor=`rgb(${r},${g},${b})`
+        })
+    
+       }
+
+
+    
+</script>
+</html>
