@@ -34,7 +34,7 @@
     border:2px solid gray;
 }
 
-@media(max-width:600px){
+/*@media(max-width:600px){
     .navbar1{
     display:Flex;
     gap:10px;
@@ -61,7 +61,7 @@
     height:3.5rem;
     border:2px solid gray;
 }
-}
+}*/
 
 .a{
     display:flex;

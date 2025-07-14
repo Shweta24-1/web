@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<style>
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: aquamarine;
+    }
+  ul{
+    display: flex;
+    gap: 22px;
+  }
+  .hb{
+    display: none;
+  }
+  @media (max-width:600px){
+    .hb{
+        display: block;
+    }
+    .navitems{
+        display: none;
+        position: absolute;
+        background-color: bisque;
+        top: 82px;
+        width: 100%;
+        justify-content: center;
+    }
+    ul{
+        flex-direction: column;
+      
+    }
+    .active{
+        display: flex;
+    }
+  }
+</style>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>logo</h1>
+        </div>
+        <div class="navitems">
+            <ul>
+                <li>Home</li>
+                <li>about</li>
+                <li>ContactUs</li>
+            </ul>
+        </div>
+        <div class="hb">
+            <i class="ri-menu-line"></i>
+        </div>
+    </nav>
+</body>
+<script>
+    let navitems=document.querySelector(".navitems")
+    let hb=document.querySelector(".hb");
+    hb.addEventListener("click",()=>{
+    navitems.classList.toggle("active");
+    })
+</script>
+
+</html>
