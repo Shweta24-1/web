@@ -12,6 +12,7 @@
     height:3rem;
 }
 
+
 .navbar1 a{
     text-decoration: none;
     color:white;
@@ -31,6 +32,35 @@
     justify-content: space-between;
     height:3.5rem;
     border:2px solid gray;
+}
+
+@media(max-width:600px){
+    .navbar1{
+    display:Flex;
+    gap:10px;
+    background-color: black;
+    height:3rem;
+}
+.navbar1 a{
+    text-decoration: none;
+    color:white;
+    padding:20px;
+    margin-left: 5px;
+    font-size: 17px;
+}
+
+.navbar1 a:hover{
+    background-color: white;
+    color:black;
+
+}
+
+.navbar2{
+    display:block;
+    justify-content: space-between;
+    height:3.5rem;
+    border:2px solid gray;
+}
 }
 
 .a{
