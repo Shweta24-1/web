@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="">Enter Name</label>
+        <input id="input1" type="text" placeholder="enter your name">
+        <label for="">Enter ID</label>
+        <input id="input2" type="text" placeholder="enter your id">
+    </form>
+    <button>Create Table</button>
+    
+</body>
+<script>
+   
+    
+    const button=document.querySelector("button");
+    button.addEventListener("click",()=>{
+    let form=document.querySelector(".form")
+    let input1=document.querySelector("#input1")
+    let input2=document.querySelector("#input2")
+    //let table=document.querySelector("table")
+    //let tr=document.querySelector("tr")
+    //let td1=document.querySelector("#td1")
+    //let td2=document.querySelector("#td2")
+    //td1.innerHTML=`<td>${input1.value}<td>`;
+    //td2.innerHTML=`<td>${input2.value}<td>`;
+    
+        let table = document.createElement("table");
+
+
+let tr1 = document.createElement("tr");
+table.appendChild(tr1);
+
+let th1 = document.createElement("th");
+th1.innerText = "Name";
+tr1.appendChild(th1);
+
+let th2 = document.createElement("th");
+th2.innerText = "ID"; 
+tr1.appendChild(th2);
+
+
+let tr2 = document.createElement("tr");
+table.appendChild(tr2);
+
+let td1 = document.createElement("td");
+td1.innerText = input1.value;
+tr2.appendChild(td1);
+
+let td2 = document.createElement("td");
+td2.innerText = input2.value; 
+tr2.appendChild(td2);
+
+document.body.appendChild(table); 
+    
+    })
+
+   
+</script>
+</html>
