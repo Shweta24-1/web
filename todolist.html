@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display:flex;
+            justify-items: center;
+            justify-content: center;
+            height:fit-content;
+            
+
+        }
+        .todo{
+            
+            background-color: black;
+            text-decoration: wavy;
+            color:white;
+            justify-items: center;
+        }
+
+        button{
+            background-color: orangered;
+            color:white;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="todo">
+        <h1>To Do List</h1>
+     <input id="ip" type="text" placeholder="enter todays task">
+     <button>Add List</button>
+     <div class="lt">
+        
+     </div>
+     
+    </div>
+    </div>
+    
+</body>
+<script>
+    const todo = document.querySelector(".todo");
+const input = document.querySelector("#ip");
+const button = document.querySelector("button");
+
+button.addEventListener("click", () => {
+    const lt = document.querySelector(".lt");
+    const li = document.createElement("li");
+    li.innerHTML = `${input.value}`;
+    lt.appendChild(li);
+
+    if (input.value.trim() !== "") {
+        const btn2 = document.createElement("button");
+        btn2.innerText = "Remove";
+        li.appendChild(btn2);
+
+        btn2.addEventListener("click", () => {
+            lt.removeChild(li);
+        });
+    }
+
+    input.value = "";
+});
+
+    
+</script>
+</html>
