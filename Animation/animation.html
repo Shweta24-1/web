@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Animation</title>
+  <style>
+    .bg {
+      background-image: url('https://static.vecteezy.com/system/resources/thumbnails/031/691/466/small_2x/or-illustrator-of-horizontal-view-of-asphalt-road-background-of-trees-and-green-grass-and-mountain-under-the-blue-sky-vector.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #i1 {
+      position: relative;
+      padding-top: 20rem;
+      height: 300px;
+      width: 500px;
+      z-index: 2;
+   
+    
+      animation: movecar infinite 4s linear;
+    }
+
+    #i2, #i3 {
+      
+      height: 110px;
+      width: 110px;
+      animation: tyre2 4s linear infinite;
+      
+    }
+    .tyre{
+       position: relative;
+        display: flex;
+        gap: 11rem;
+        margin-left: 42px;
+        margin-top: -9rem;
+        animation: tyre1 4s linear infinite;
+    }
+
+@keyframes tyre2{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+    @keyframes tyre1 {
+        0%{
+            top: 0;
+            left: 0;
+           
+        }
+        100%{
+            top: 0;
+            left: 1720px;
+          
+            
+        }
+    }
+
+    @keyframes movecar{
+       0%{
+        top: 0;
+        left: 0;
+       }
+       100%{
+        top: 0;
+        left: 1720px;
+       }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg">
+    <img id="i1" src="car.png" alt="Car"/>
+   <div class="tyre">
+     <img id="i2" src="wheel.png" alt="Wheel 1"/>
+    <img id="i3" src="wheel.png" alt="Wheel 2"/>
+   </div>
+  </div>
+</body>
+</html>
