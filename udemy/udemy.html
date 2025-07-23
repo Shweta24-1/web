@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Udemy Mockup</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+     swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sub1 {
+      background-color: rgb(80, 34, 195);
+      color: white;
+      text-align: center;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sub2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      height: 80px;
+      border-bottom: 2px solid gray;
+    }
+
+    .left, .right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .left a img {
+      height: 32px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: black;
+      font-size: 14px;
+    }
+
+    .nav-link:hover {
+      color: rgb(109, 40, 210);
+      background-color: rgb(219, 208, 236);
+      border-radius: 4px;
+      padding: 4px 8px;
+    }
+
+    .ip {
+      display: flex;
+      align-items: center;
+      border: 2px solid gray;
+      border-radius: 14px;
+      width: 350px;
+      height: 30px;
+      padding: 0 10px;
+      font-size: 15px;
+    }
+
+    .ip input {
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 15px;
+    }
+
+    #b1, #b2 {
+      width: 65px;
+      height: 30px;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #b1 {
+      background-color: gainsboro;
+      border: 2px solid rgb(109, 40, 210);
+      color: black;
+    }
+
+    #b2 {
+      background-color: rgb(109, 40, 210);
+      color: white;
+      border: none;
+    }
+
+    #glo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(109, 40, 210);
+      border: 2px solid rgb(109, 40, 210);
+      width: 30px;
+      height: 30px;
+      border-radius: 2px;
+    }
+
+    #glo i {
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="sub1">
+      <p><strong>AI is changing the game |</strong> Get the skills with Udemy Business.</p>
+    </div>
+
+    <div class="sub2">
+      <div class="left">
+        <a href="#"><img src="https://frontends.udemycdn.com/frontends-homepage/staticx/udemy/images/v7/logo-udemy.svg" /></a>
+        <a href="#" class="nav-link">Explore</a>
+        <div class="ip">
+          <input placeholder="Search for anything" />
+          <i class="ri-search-line"></i>
+        </div>
+      </div>
+
+      <div class="right">
+        <a href="#" class="nav-link">Plans & Pricing</a>
+        <a href="#" class="nav-link">Udemy Business</a>
+        <a href="#" class="nav-link">Teach on Udemy</a>
+        <a href="#"><i class="ri-shopping-cart-line"></i></a>
+        <button id="b1">Log in</button>
+        <button id="b2">Sign Up</button>
+        <a href="#" id="glo"><i class="ri-global-line"></i></a>
+      </div>
+    </div>
+  </div>
+   <swiper-container class="mySwiper" navigation="true">
+    <swiper-slide><img src="https://img-c.udemycdn.com/notices/web_carousel_slide/image/e855ff21-263a-4971-a223-686a2cea6456.jpg"></swiper-slide>
+    <swiper-slide><img src="https://img-c.udemycdn.com/notices/web_carousel_slide/image/9c276f10-7ba5-46a1-ac7e-e6087a9c28d4.jpg"></swiper-slide>
+  </swiper-container>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+</html>
